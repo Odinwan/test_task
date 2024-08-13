@@ -1,0 +1,112 @@
+.slider-mobile {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .slider-mobile {
+    display: block;
+    position: relative;
+  }
+  .slider-mobile img {
+    width: 100%;
+    object-fit: cover;
+    height: 540px;
+  }
+}
+
+.slider {
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  .slider {
+    display: none;
+  }
+}
+.slider .swiper-container {
+  width: 100%;
+}
+.slider .swiper-pagination-bullet {
+  height: 16px;
+  width: 16px;
+  opacity: 1 !important;
+  background: #fff !important;
+}
+.slider .swiper-pagination-bullet-active {
+  background: #9747FF !important;
+}
+.slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.slider .swiper-slide img {
+  user-select: none;
+  width: 100%;
+  object-fit: cover;
+}
+.slider .slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.slider .slide-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.slider .slide-content p {
+  font-size: 1.5rem;
+}
+.slider .swiper-button-next {
+  right: 96px;
+  top: 50%;
+}
+@media screen and (min-width: 1920px) {
+  .slider .swiper-button-next {
+    right: 20%;
+  }
+}
+.slider .swiper-button-prev {
+  left: 96px;
+  top: 50%;
+}
+@media screen and (min-width: 1920px) {
+  .slider .swiper-button-prev {
+    left: 20%;
+  }
+}
+.slider .swiper-button-next,
+.slider .swiper-button-prev {
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 100%;
+  transition: 400ms;
+}
+.slider .swiper-button-next svg,
+.slider .swiper-button-prev svg {
+  height: 22px;
+  width: 22px;
+}
+.slider .swiper-button-next:before,
+.slider .swiper-button-prev:before {
+  content: none;
+}
+.slider .swiper-button-next:after,
+.slider .swiper-button-prev:after {
+  content: none;
+}
+.slider .swiper-button-next:hover,
+.slider .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.67);
+}
+.slider .swiper-pagination-bullet {
+  background: #fff;
+}
+
+/*# sourceMappingURL=slider.css.map */

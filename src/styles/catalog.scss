@@ -1,0 +1,217 @@
+.catalog {
+  background-color: #f5f5f5;
+  padding: 96px 0;
+  margin: 0 auto;
+  max-width: 1300px;
+  border-bottom: 1px solid #E7E9EC;
+
+  @media screen and (max-width: 480px) {
+    padding: 48px 12px;
+  }
+
+  &__title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 480px) {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 48px;
+      text-align: left;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 auto 48px;
+    line-height: 20px;
+    text-align: center;
+    color: #86929E;
+    width: 600px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: left;
+      margin: 0 auto 24px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    align-items: flex-start;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @media screen and (max-width: 920px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media screen and (max-width: 480px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .catalog__item {
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid #E7E9EC;
+    transition:400ms;
+    background: white;
+    border-radius: 6px;
+    position: relative;
+
+    &__marker {
+      position: absolute;
+      z-index: 2;
+      border-radius: 15px;
+      padding: 5px 12px;
+      top: 20px;
+      color: white;
+      left: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      text-align: left;
+
+      @media screen and (max-width: 600px) {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        text-align: left;
+        padding: 2px 8px;
+      }
+
+      &--green {
+        background: linear-gradient(90deg, rgba(9, 246, 133, 1) 0%,  rgba(16, 188, 85, 1) 100%);
+      }
+
+      &--red {
+        background: linear-gradient(90deg, rgba(255, 151, 195, 1) 0%,  rgba(255, 28, 28, 1) 100%);
+      }
+    }
+
+    .slider-container {
+      position: relative;
+
+      .swiper-pagination {
+
+        &-bullet {
+          height: 16px;
+          width: 16px;
+          opacity: 1!important;
+          background: #F3F4F5 !important;
+        }
+
+        &-bullet-active {
+          background: #9747FF!important;
+        }
+      }
+    }
+
+    &:hover {
+      border: 2px solid #9747FF;
+
+      &__info {
+        &__details {
+          color: #9747FF;
+        }
+      }
+    }
+
+    &__info {
+      height: 100%;
+      padding: 20px;
+      background: #F3F4F5;
+
+      &__price {
+        display: flex;
+        flex-flow: column;
+        gap: 2px;
+
+        &__percent {
+          font-size: 16px;
+          font-weight: 400;
+          color: #DC3545;
+          line-height: 20px;
+          text-align: left;
+
+          @media screen and (max-width: 600px) {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+          }
+        }
+
+        &__old {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+          text-align: left;
+          color: #86929E;
+          text-decoration: line-through;
+
+          @media screen and (max-width: 600px) {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            text-align: left;
+          }
+        }
+
+        &__amount {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+          text-align: left;
+        }
+      }
+
+      &__name {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        width: 90%;
+        margin-bottom: 16px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          text-align: left;
+        }
+      }
+
+      &__details {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: left;
+
+        @media screen and (max-width: 600px) {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .slider-container {
+    margin-bottom: 20px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    display: block;
+    user-select: none;
+  }
+}

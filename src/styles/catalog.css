@@ -1,0 +1,203 @@
+.catalog {
+  background-color: #f5f5f5;
+  padding: 96px 0;
+  margin: 0 auto;
+  max-width: 1300px;
+  border-bottom: 1px solid #E7E9EC;
+}
+@media screen and (max-width: 480px) {
+  .catalog {
+    padding: 48px 12px;
+  }
+}
+.catalog__title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 480px) {
+  .catalog__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+}
+.catalog__description {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 auto 48px;
+  line-height: 20px;
+  text-align: center;
+  color: #86929E;
+  width: 600px;
+}
+@media screen and (max-width: 600px) {
+  .catalog__description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin: 0 auto 24px;
+  }
+}
+.catalog__list {
+  display: grid;
+  align-items: flex-start;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media screen and (max-width: 920px) {
+  .catalog__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 480px) {
+  .catalog__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.catalog .catalog__item {
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid #E7E9EC;
+  transition: 400ms;
+  background: white;
+  border-radius: 6px;
+  position: relative;
+}
+.catalog .catalog__item__marker {
+  position: absolute;
+  z-index: 2;
+  border-radius: 15px;
+  padding: 5px 12px;
+  top: 20px;
+  color: white;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .catalog .catalog__item__marker {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+    padding: 2px 8px;
+  }
+}
+.catalog .catalog__item__marker--green {
+  background: linear-gradient(90deg, rgb(9, 246, 133) 0%, rgb(16, 188, 85) 100%);
+}
+.catalog .catalog__item__marker--red {
+  background: linear-gradient(90deg, rgb(255, 151, 195) 0%, rgb(255, 28, 28) 100%);
+}
+.catalog .catalog__item .slider-container {
+  position: relative;
+}
+.catalog .catalog__item .slider-container .swiper-pagination-bullet {
+  height: 16px;
+  width: 16px;
+  opacity: 1 !important;
+  background: #F3F4F5 !important;
+}
+.catalog .catalog__item .slider-container .swiper-pagination-bullet-active {
+  background: #9747FF !important;
+}
+.catalog .catalog__item:hover {
+  border: 2px solid #9747FF;
+}
+.catalog .catalog__item:hover__info__details {
+  color: #9747FF;
+}
+.catalog .catalog__item__info {
+  height: 100%;
+  padding: 20px;
+  background: #F3F4F5;
+}
+.catalog .catalog__item__info__price {
+  display: flex;
+  flex-flow: column;
+  gap: 2px;
+}
+.catalog .catalog__item__info__price__percent {
+  font-size: 16px;
+  font-weight: 400;
+  color: #DC3545;
+  line-height: 20px;
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .catalog .catalog__item__info__price__percent {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+  }
+}
+.catalog .catalog__item__info__price__old {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #86929E;
+  text-decoration: line-through;
+}
+@media screen and (max-width: 600px) {
+  .catalog .catalog__item__info__price__old {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+  }
+}
+.catalog .catalog__item__info__price__amount {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+}
+.catalog .catalog__item__info__name {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  width: 90%;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 600px) {
+  .catalog .catalog__item__info__name {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+.catalog .catalog__item__info__details {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .catalog .catalog__item__info__details {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+.catalog .slider-container {
+  margin-bottom: 20px;
+}
+.catalog .swiper-slide img {
+  width: 100%;
+  display: block;
+  user-select: none;
+}
+
+/*# sourceMappingURL=catalog.css.map */

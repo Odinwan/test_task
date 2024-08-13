@@ -1,0 +1,30 @@
+.my__button {
+  display: flex;
+  align-items: center;
+  padding: 19px 24px;
+  justify-content: center;
+  gap: 8px;
+  background-color: rgb(151, 71, 255);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.my__button:hover {
+  background-color: rgba(151, 71, 255, 0.66);
+}
+.my__button-icon {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+.my__button:disabled {
+  background-color: #c4c4c4;
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=button.css.map */

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2016", // или "es2020"
+    "lib": ["dom", "es2016"], // или "es2020"
+    "types": ["chrome"],
+    "module": "ES6",
+    "strict": true,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*", "node_modules/@types/jquery/misc.d.ts"]
+}

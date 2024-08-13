@@ -1,0 +1,229 @@
+.benefits {
+  background-color: #f5f5f5;
+  padding: 96px 0;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+@media screen and (max-width: 600px) {
+  .benefits {
+    padding: 48px 0;
+  }
+}
+.benefits__title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 480px) {
+  .benefits__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+  }
+}
+.benefits__list {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "shops masters img" "shops masters img" "catalog days img" "catalog days button";
+}
+@media screen and (max-width: 480px) {
+  .benefits__list {
+    display: none;
+  }
+}
+@media screen and (max-width: 920px) {
+  .benefits__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-areas: "shops masters" "catalog days" "img button";
+  }
+}
+.benefits__list__mobile {
+  display: none;
+  padding: 0 0 0 12px;
+  gap: 16px;
+  flex-flow: column;
+}
+@media screen and (max-width: 480px) {
+  .benefits__list__mobile {
+    display: flex;
+  }
+  .benefits__list__mobile .benefits__item--img, .benefits__list__mobile .benefits__item--button {
+    width: calc(100% - 12px);
+  }
+}
+.benefits .swiper {
+  width: 100%;
+  height: 100%;
+}
+.benefits .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.benefits .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.benefits__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #E7E9EC;
+  justify-content: space-between;
+  padding: 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .benefits__item {
+    padding: 16px;
+  }
+}
+.benefits__item__description {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+@media screen and (max-width: 480px) {
+  .benefits__item__description {
+    align-items: flex-start;
+  }
+}
+.benefits__item__description__title {
+  width: 100%;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  text-align: left;
+}
+@media screen and (max-width: 480px) {
+  .benefits__item__description__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+  }
+}
+.benefits__item__description__subtitle {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+}
+@media screen and (max-width: 480px) {
+  .benefits__item__description__subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    width: 50%;
+    line-height: 28px;
+    text-align: left;
+  }
+}
+.benefits__item__icon {
+  background: #E0CFFC;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  z-index: 3;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .benefits__item__icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}
+.benefits__item .--last {
+  width: unset;
+  height: unset;
+  background: transparent;
+}
+.benefits__item__hidden__text {
+  opacity: 0;
+  transition: 400ms;
+  background: #5a54d6;
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+  color: white;
+}
+@media screen and (max-width: 480px) {
+  .benefits__item__hidden__text {
+    position: static;
+    opacity: 1;
+    padding: 0;
+    color: rgb(134, 146, 158);
+    background: transparent;
+    text-align: left;
+  }
+}
+.benefits__item:hover .benefits__item__hidden__text {
+  opacity: 1;
+}
+.benefits__item--img {
+  grid-area: img;
+  padding: 0;
+}
+.benefits__item--img img {
+  height: 100%;
+  object-fit: cover;
+  width: auto;
+  object-position: top;
+}
+.benefits__item--shops {
+  grid-area: shops;
+}
+.benefits__item--masters {
+  grid-area: masters;
+}
+.benefits__item--catalog {
+  grid-area: catalog;
+}
+.benefits__item--days {
+  grid-area: days;
+}
+.benefits__item--time {
+  grid-area: time;
+}
+.benefits__item--clients {
+  grid-area: clients;
+}
+.benefits__item--button {
+  cursor: pointer;
+  grid-area: button;
+  background: #9747FF;
+  color: #fff;
+  border-radius: 4px;
+  transition: 400ms;
+}
+.benefits__item--button:hover {
+  background: rgba(151, 71, 255, 0.7);
+}
+@media screen and (max-width: 480px) {
+  .benefits .benefits__item--button {
+    height: 130px;
+  }
+}
+
+/*# sourceMappingURL=benefits.css.map */
