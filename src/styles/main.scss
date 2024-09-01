@@ -21,7 +21,15 @@ body {
   }
 }
 
+.my__input.--error {
+  border-color: red;
+}
 
+.tooltip {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
 
 .swiper-pagination {
 

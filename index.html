@@ -352,7 +352,7 @@
           необходимости посещать физические магазины в ограниченное время.
         </div>
       </div>
-      <div class='benefits__item benefits__item--button'  data-bs-toggle='modal' data-bs-target='#deskTopFeedBackForm'>
+      <div class='benefits__item benefits__item--button' data-bs-toggle='modal' data-bs-target='#deskTopFeedBackForm'>
         <div class='benefits__item__description'>
           <div class='benefits__item__description__subtitle'>Оставьте заявку</div>
         </div>
@@ -501,7 +501,6 @@
             <div class='swiper-slide'>
               <img src='./assets/images/ring.png' alt='Elegant Gold Ring'>
             </div>
-            <!-- Additional slides can be added here -->
           </div>
           <div class='navigation swiper-pagination'></div>
         </div>
@@ -534,7 +533,6 @@
             <div class='swiper-slide'>
               <img src='./assets/images/ring.png' alt='Elegant Gold Ring'>
             </div>
-            <!-- Additional slides can be added here -->
           </div>
           <div class='navigation swiper-pagination'></div>
         </div>
@@ -564,7 +562,6 @@
             <div class='swiper-slide'>
               <img src='./assets/images/ring.png' alt='Elegant Gold Ring'>
             </div>
-            <!-- Additional slides can be added here -->
           </div>
           <div class='navigation swiper-pagination'></div>
         </div>
@@ -591,7 +588,6 @@
             <div class='swiper-slide'>
               <img src='./assets/images/ring.png' alt='Elegant Gold Ring'>
             </div>
-            <!-- Additional slides can be added here -->
           </div>
           <div class='navigation swiper-pagination'></div>
         </div>
@@ -625,14 +621,33 @@
 >
   <div class='modal-dialog'>
     <div class='modal-content desk-form'>
-      <div class='desk-form__left-side'>
+      <div class='desk-form__left-side --center' id='form__success__window'>
+        <div class='desk-form__left-side__success__arrow'>
+          <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' clip-rule='evenodd'
+                  d='M34.5118 10.488C35.1627 11.1389 35.1627 12.1942 34.5118 12.8451L17.8451 29.5117C17.1943 30.1626 16.139 30.1626 15.4881 29.5117L7.15478 21.1784C6.50391 20.5275 6.50391 19.4722 7.15478 18.8214C7.80566 18.1705 8.86093 18.1705 9.5118 18.8214L16.6666 25.9762L32.1548 10.488C32.8057 9.83716 33.8609 9.83716 34.5118 10.488Z'
+                  fill='white' />
+          </svg>
+        </div>
+        <div class='desk-form__left-side__success__title'>
+          Ваша заявка отправлена!
+        </div>
+        <div class='desk-form__left-side__success__description'>
+          Мы свяжемся с вами в ближайшее время.
+        </div>
+      </div>
+      <div class='desk-form__left-side --active' id='form__simple__window'>
         <div class='desk-form__left-side__title'>Заказать изделие</div>
         <div class='desk-form__left-side__description'>Оставьте заявку сейчас и мы свяжемся с вами в ближайшее время.
         </div>
         <form id='orderForm'>
-          <input type='text' id='name' class='my__input' placeholder='Имя' required>
-          <input type='tel' id='phone' class='my__input' placeholder='Телефон' required>
-          <button disabled type='submit' class='my__button'>Заказать изделие</button>
+          <div class='input__wrapper'>
+            <input type='text' id='name' name='name' class='my__input' placeholder='Имя' required>
+          </div>
+          <div class='input__wrapper'>
+            <input type='tel' id='phone' name='phone' class='my__input' placeholder='+7 (___) ___-__-__' required>
+          </div>
+          <button type='submit' class='my__button'>Заказать изделие</button>
         </form>
       </div>
       <div class='desk-form__right-side'>
@@ -648,10 +663,11 @@
                 fill='#222222' />
         </svg>
       </button>
-
     </div>
   </div>
 </div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/inputmask.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js'
         integrity='sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF'

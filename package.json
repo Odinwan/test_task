@@ -6,8 +6,7 @@
     "lint": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\" && eslint --ext .ts,.tsx src --fix",
     "build": "npm run clearDist && npm run stylegen && webpack --config webpack.dev.cjs",
     "watchWP": "webpack --config webpack.dev.cjs --watch",
-    "watchST": "sass --watch src/styles:src/styles",
-    "dev": "npm run watchWP & npm run watchST"
+    "watchST": "sass --watch src/styles:src/styles"
   },
   "name": "copilotsalesdemo",
   "version": "1.0.0",
