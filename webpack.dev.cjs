@@ -14,13 +14,13 @@ module.exports = merge(common, {
         minimize: true,
         minimizer: [
             new CssMinimizerPlugin(),
-            // new TerserPlugin({
-            //     terserOptions: {
-            //         compress: {
-            //             drop_console: true, // Удаляет console.log в продакшен сборке
-            //         },
-            //     },
-            // })
+            new TerserPlugin({
+                terserOptions: {
+                    compress: {
+                        drop_console: true, // Удаляет console.log в продакшен сборке
+                    },
+                },
+            })
         ],
     },
     watch: true

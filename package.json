@@ -85,8 +85,11 @@
   },
   "dependencies": {
     "@highlight-run/node": "^3.9.0",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.0.2",
     "highlight.run": "^9.0.3",
-    "swiper": "^11.1.9"
+    "imask": "^7.6.1",
+    "jquery.inputmask": "^3.3.4",
+    "swiper": "^11.1.12",
+    "validate.js": "^0.13.1"
   }
 }

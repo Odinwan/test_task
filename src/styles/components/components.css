@@ -157,6 +157,12 @@
   height: 100%;
 }
 
+#form__success__window {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
 .desk-form {
   display: flex;
   flex-flow: row;

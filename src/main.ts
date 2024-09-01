@@ -1,9 +1,8 @@
 import { Swiper } from 'swiper';
 import { Navigation, Pagination, Parallax } from 'swiper/modules';
+import IMask from 'imask';
 
 Swiper.use([Parallax, Navigation, Pagination]);
-
-
 
 document.addEventListener('DOMContentLoaded', (event) => {
   // @ts-ignore
@@ -13,17 +12,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     observeParents: true,
     parallax: true,
     pagination: {
-      el: '.swiper-pagination'
+      el: '.swiper-pagination',
     },
     navigation: {
       nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
+      prevEl: '.swiper-button-prev',
+    },
   });
 
   // @ts-ignore
   new Swiper('.catalog__item__slider', {
-    loop: true
+    loop: true,
   });
 
   // @ts-ignore
@@ -32,8 +31,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     spaceBetween: 30,
     pagination: {
       el: '.swiper-pagination',
-      clickable: true
-    }
+      clickable: true,
+    },
   });
 
   // @ts-ignore
@@ -42,8 +41,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     spaceBetween: 30,
     pagination: {
       el: '.swiper-pagination',
-      clickable: true
-    }
+      clickable: true,
+    },
   });
 
   const burger = document.getElementById('burger');
@@ -64,57 +63,54 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
   // Применение маски для телефона
-  // @ts-ignore
-  Inputmask({
-    mask: "+7 (999) 999-99-99",
-    placeholder: "_",
-    showMaskOnHover: false,
-    showMaskOnFocus: true,
-    definitions: {
-      '9': {
-        validator: "[0-9]",
-        cardinality: 1,
-        definitionSymbol: "*"
-      }
-    }
-  }).mask('#phone');
-});
+  const phoneInput = document.getElementById('phone');
 
+  const maskOptions = {
+    mask: '+{7} (000) 000-00-00',
+    lazy: false, // Показывать маску сразу
+    placeholderChar: '_',
+    definitions: {
+      '0': {
+        mask: /[0-9]/, // Допустимые символы для маски
+      },
+    },
+  };
+
+  phoneInput && IMask(phoneInput, maskOptions);
+});
 
 const constraints = {
   name: {
-    presence: { allowEmpty: false, message: "Поле обязательно для заполнения" }
+    presence: { allowEmpty: false, message: 'Поле обязательно для заполнения' },
   },
   phone: {
-    presence: { allowEmpty: false, message: "Поле обязательно для заполнения" },
+    presence: { allowEmpty: false, message: 'Поле обязательно для заполнения' },
     format: {
       pattern: /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/,
-      message: "Введите корректный номер телефона"
-    }
-  }
+      message: 'Введите корректный номер телефона',
+    },
+  },
 };
 
 // @ts-ignore
-document.getElementById('orderForm').addEventListener('submit', function(event) {
+document.getElementById('orderForm').addEventListener('submit', function (event) {
   event.preventDefault();
 
   const form = event.target;
   // @ts-ignore
   const values = validate.collectFormValues(form);
 
-  const nameInput = document.getElementById('name') as HTMLInputElement;
-  const phoneInput = document.getElementById('phone') as HTMLInputElement;
 
   // @ts-ignore
   const errors = validate(values, constraints);
 
   // Очищаем старые ошибки
-  document.querySelectorAll('.input__wrapper .error-message').forEach(el => el.remove());
+  document.querySelectorAll('.input__wrapper .error-message').forEach((el) => el.remove());
 
   if (errors) {
     // Если есть ошибки, проходимся по ним и выводим их в соответствующие input__wrapper
     // @ts-ignore
-    Object.keys(errors).forEach(function(key) {
+    Object.keys(errors).forEach(function (key) {
       // @ts-ignore
       const wrapper = document.getElementById(key).closest('.input__wrapper');
       if (wrapper) {
