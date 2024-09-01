@@ -4,7 +4,7 @@ import IMask from 'imask';
 
 Swiper.use([Parallax, Navigation, Pagination]);
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
   // @ts-ignore
   new Swiper('.swiper-container', {
     loop: true,
@@ -99,7 +99,6 @@ document.getElementById('orderForm').addEventListener('submit', function (event)
   const form = event.target;
   // @ts-ignore
   const values = validate.collectFormValues(form);
-
 
   // @ts-ignore
   const errors = validate(values, constraints);
